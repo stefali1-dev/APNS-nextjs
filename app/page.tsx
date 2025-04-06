@@ -14,48 +14,253 @@ const HomePage = () => {
   // );
   return (
     <>
-      {/* Hero Section */}
-      <header className="w-full bg-green-700 text-white">
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center px-6 py-10">
-          <div className="md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-4xl md:text-4xl font-bold leading-tight mb-4">
-              Transformăm Cunoașterea în Sănătate!
-            </h1>
-            <p className="text-lg mb-6">
-              APNS promovează alimentația corectă prin programe educaționale în școli și online,
-              resurse practice și combaterea bolilor legate de nutriție. Alătură-te comunității noastre!
-            </p>
-            <a
-              href="#"
-              className="inline-block bg-white text-green-600 hover:text-green-700 font-medium px-6 py-3 rounded shadow-md transition-colors duration-300"
-            > 
-              Redirecționează 3.5% impozit
-            </a>
+
+      <section className="bg-primary">
+        <div className="flex w-full flex-col md:flex-row">
+          {/* Left (White) Section, now vertically centered */}
+          <div className="flex-1 md:w-1/2 bg-gray-100 px-4 md:px-10 xl:px-[108px] py-10 flex items-center">
+            <div className="max-w-[600px] mx-auto">
+              <h1 className="text-black mb-5 text-3xl md:text-4xl xl:text-5xl xl:leading-[4rem] font-bold">
+                Transformăm Cunoașterea în Sănătate!
+              </h1>
+              <p className="text-lg md:text-xl leading-relaxed mb-8">
+                APNS promovează alimentația corectă prin programe educaționale în școli și online,
+                resurse practice și combaterea bolilor legate de nutriție. Alătură-te comunității noastre!
+              </p>
+              <div>
+                <a
+                  href="#"
+                  className="font-bold text-xl inline-block text-white px-8 py-4 hover:scale-105 duration-300 relative overflow-hidden bg-gradient-to-r from-green-500 via-emerald-500 to-green-700 hover:from-green-400 hover:via-emerald-400 hover:to-green-700 animate-gradient-pulse hover:shadow-lg transition-all"
+                >
+                  Redirecționează 3.5% impozit
+                </a>
+
+                <style jsx global>{`
+      @keyframes gradient-pulse {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    `}</style>
+
+                <style jsx>{`
+      .animate-gradient-pulse {
+        background-size: 200% 200%;
+        animation: gradient-pulse 2s ease infinite;
+      }
+    `}</style>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-8 md:mt-0 md:pl-10">
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/apns.png" 
-                alt="Membrii asociației" 
-                className="object-cover w-full h-full"
-                width={600}
-                height={400}
-              />
+          {/* Right (Green) Section */}
+          <div className="flex-1 md:w-1/2 bg-green-700 p-10 flex items-center justify-start relative overflow-visible">
+            <div className="relative z-10 -ml-12 md:-ml-36">
+              <div className="border-y-[20px] border-r-[20px] border-gray-100 py-12 pr-12">
+                <div className="relative">
+                  {/* Make the image bigger by changing these classes as needed */}
+                  <img
+                    src="/images/apns.png"
+                    alt="Four senior men and women out for a hike"
+                    className="w-[1000px] h-auto object-cover"
+                    loading="eager"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
+      {/* Cards Section */}
+      <main className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+
+          {/* Card 1: Diabet */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Diabet
+            </h3>
+          </a>
+
+          {/* Card 2: Obezitate */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Obezitate
+            </h3>
+          </a>
+
+          {/* Card 3: Boli Cardiovasculare */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Boli Cardiovasculare
+            </h3>
+          </a>
+
+          {/* Card 4: Ciroză */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21H3z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Ciroză
+            </h3>
+          </a>
+
+          {/* Card 5: Hipertensiune */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Hipertensiune
+            </h3>
+          </a>
+
+          {/* Card 6: Colesterol Ridicat */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Colesterol Ridicat
+            </h3>
+          </a>
+
+          {/* Card 7: Deficiențe Nutriționale */}
+          <a
+            href="#"
+            className="shadow-lg group relative flex flex-col items-center bg-white rounded-xl p-4 hover:shadow-lg transition-all duration-300 ease-in-out min-h-[160px] justify-center transform hover:-translate-y-2.5"
+          >
+            <svg
+              className="w-8 h-8 mb-3 text-gray-500 group-hover:text-green-600 transition-colors duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+              />
+            </svg>
+            <h3 className="text-base font-semibold text-gray-700 text-center px-2 leading-tight">
+              Deficiențe Nutriționale
+            </h3>
+          </a>
+
+        </div>
+      </main>
       {/* Main Content Sections */}
       <section className="bg-white mt-20">
         <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:pb-24">
           <div className="space-y-8 lg:space-y-20">
             {/* First Content Block */}
             <div className="items-center gap-8 xl:gap-16 md:grid md:grid-cols-2">
-              <img 
-                className="w-full rounded-lg shadow-lg hidden sm:block" 
-                src="/images/image1.png" 
+              <img
+                className="w-full rounded-lg shadow-lg hidden sm:block"
+                src="/images/image1.png"
                 alt="Workshop nutrițional"
                 width={600}
                 height={400}
@@ -128,9 +333,9 @@ const HomePage = () => {
                   </a>
                 </div>
               </div>
-              <img 
-                className="w-full rounded-lg shadow-lg hidden sm:block" 
-                src="/images/donate.png" 
+              <img
+                className="w-full rounded-lg shadow-lg hidden sm:block"
+                src="/images/donate.png"
                 alt="Comunitate APNS"
                 width={600}
                 height={400}
@@ -241,9 +446,9 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6">
-              <img 
-                src="/images/recipe.png" 
-                alt="Rețete sănătoase" 
+              <img
+                src="/images/recipe.png"
+                alt="Rețete sănătoase"
                 className="rounded-lg mb-4 w-full h-48 object-cover"
                 width={400}
                 height={200}
@@ -255,9 +460,9 @@ const HomePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow p-6">
-              <img 
-                src="/images/campanie.png" 
-                alt="Campanie școli" 
+              <img
+                src="/images/campanie.png"
+                alt="Campanie școli"
                 className="rounded-lg mb-4 w-full h-48 object-cover"
                 width={400}
                 height={200}
@@ -269,8 +474,8 @@ const HomePage = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow p-6">
-              <img 
-                src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" 
+              <img
+                src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
                 alt="Cumpărături sănătoase"
                 className="rounded-lg mb-4 w-full h-48 object-cover"
                 width={400}
@@ -375,9 +580,9 @@ const HomePage = () => {
             </div>
 
             <div className="md:w-1/2">
-              <img 
-                src="/images/donate2.png" 
-                alt="Copii în clasă" 
+              <img
+                src="/images/donate2.png"
+                alt="Copii în clasă"
                 className="w-full rounded-lg shadow"
                 width={600}
                 height={400}
